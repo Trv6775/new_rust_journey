@@ -1,12 +1,19 @@
 fn main() {
-   let number=3;
-   // if number>5{
-   //    println!("Condition was false");
-   // }else {
-   //     println!("Condition was true");
-   // }
-   match number<5 {
-      true=>println!("Condition was true"),
-      false=>println!("COndition was false")
-   }
+    let mut count = 0;
+    'counting_up:loop {
+        println!("count= {count}");
+        let mut remaining=10;
+        loop {
+            println!("remaining= {remaining}");
+            if remaining==6{
+               break;
+            }
+            if count==3{
+               break 'counting_up;
+            }
+            remaining-=1;
+        }
+        count+=1;
+    }
+    println!("End count= {count}");
 }
