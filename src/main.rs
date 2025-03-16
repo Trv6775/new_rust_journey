@@ -1,8 +1,6 @@
 fn main() {
-   let  reference_to_nothing=dangle();
-   println!("{}",reference_to_nothing);
-}
-fn dangle()->&String{
-   let s=String::from("hello");
-   &s
+   let s="Some Nights";
+   let some=&s[0..=3];
+   let nights=&s[5..=10];
+   println!("{},{}",some,nights);
 }
