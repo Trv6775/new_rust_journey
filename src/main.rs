@@ -1,6 +1,14 @@
 fn main() {
-   let s="Some Nights";
-   let some=&s[0..=3];
-   let nights=&s[5..=10];
-   println!("{},{}",some,nights);
+   let s=" ";
+   let f=first_word(&s);
+   println!("{f}");
+}
+fn first_word(s:&str)->&str{
+   let bytes=s.as_bytes();
+   for (i,&item) in bytes.iter().enumerate(){
+      if item==b' '{
+         return &s[..i];
+      }
+   }
+   &s[..]
 }
