@@ -1,14 +1,16 @@
-fn main() {
-   let s=" ";
-   let f=first_word(&s);
-   println!("{f}");
+#[derive(Debug)]
+struct User{
+   active:bool,
+   username:String,
+   email:String,
+   sign_in_count:u64
 }
-fn first_word(s:&str)->&str{
-   let bytes=s.as_bytes();
-   for (i,&item) in bytes.iter().enumerate(){
-      if item==b' '{
-         return &s[..i];
-      }
-   }
-   &s[..]
+fn main(){
+   let user1=User{
+      active:true,
+      username:String::from("Trevor Kimutai"),
+      email:String::from("trv6775@gmail.com"),
+      sign_in_count:1
+   };
+   println!("{:?}",user1);
 }
