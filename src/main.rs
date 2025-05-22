@@ -1,17 +1,5 @@
-#[derive(Debug)]
-struct User{
-   active:bool,
-   username:String,
-   email:String,
-   sign_in_count:u64
-}
 fn main(){
-   let mut user1=User{
-      active:true,
-      username:String::from("Trevor Kimutai"),
-      email:String::from("trv6775@gmail.com"),
-      sign_in_count:1
-   };
-   user1.email=String::from("trv6775330@gmail.com");
-   println!("{:?}",user1);
+    let tup=(1,'a',0.1,"Hi");
+    let (a,b,c,d)=tup;
+    println!("The value of a is {}, b is {}, c is {} and d id {}",a,b,c,d);
 }
