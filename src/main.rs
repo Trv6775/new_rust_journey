@@ -1,8 +1,10 @@
-fn main(){
-    let tup=(1,'a',0.1,"Hi");
-    let int=tup.0;
-    let char=tup.1;
-    let float=tup.2;
-    let string=tup.3;
-    println!("int is {},char is {},float is {},string is {} ",int,char,float,string);
+
+fn main() {
+    let mut s=String::from("hello");
+    let r1=&s;
+    let r2=&s;
+    println!("r1= {r1}, r2= {r2}");
+    let r3=&mut s;
+    r3.push_str(" world");
+    println!("r3= {r3}");
 }
