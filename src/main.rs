@@ -1,6 +1,7 @@
-fn main(){
-    let x=5;
-    let y=Some(5);
-    let sum=x+y;
-    println!("{:?}",sum);
+fn main() {
+    let config_max = Some(3u8);
+    match config_max {
+        Some(max) => println!("The maximum is configured to be {max}"),
+        _=>()
+    }
 }
